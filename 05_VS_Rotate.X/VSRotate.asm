@@ -98,6 +98,7 @@ TenmSdelay:
      goto      TenmSdelay
      
 Rotate:
+     bcf       STATUS,C       ; Clear carry flag, otherwise it will fill the Display if ADRESH overflows.
      rrf       Display,f
      btfsc     STATUS,C       ; Did the bit rotate into the carry?
      bsf       Display,3      ; yes, put it into bit 3.
