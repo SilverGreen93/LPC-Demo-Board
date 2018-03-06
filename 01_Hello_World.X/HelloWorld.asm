@@ -3,7 +3,7 @@
 ;                                                                    
 ;The software supplied herewith by Microchip Technology             
 ;Incorporated (the "Company") is intended and supplied to you, the  
-;Company’s customer, for use solely and exclusively on Microchip    
+;Company's customer, for use solely and exclusively on Microchip    
 ;products. The software is owned by the Company and/or its supplier,
 ;and is protected under applicable copyright laws. All rights are   
 ;reserved. Any use in violation of the foregoing restrictions may   
