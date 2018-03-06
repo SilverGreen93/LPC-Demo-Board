@@ -3,7 +3,7 @@
 ;                                                                    
 ;The software supplied herewith by Microchip Technology             
 ;Incorporated (the "Company") is intended and supplied to you, the  
-;Company’s customer, for use solely and exclusively on Microchip    
+;Company's customer, for use solely and exclusively on Microchip    
 ;products. The software is owned by the Company and/or its supplier,
 ;and is protected under applicable copyright laws. All rights are   
 ;reserved. Any use in violation of the foregoing restrictions may   
@@ -40,10 +40,10 @@ Delay2                   ; delay loop
      org 0
 Start:
      bsf       STATUS,RP0          ; select Register Page 1
-     bcf       TRISC,0             ; make IO Pin B.0 an output
+     bcf       TRISC,0             ; make IO Pin RC0 an output
      bcf       STATUS,RP0          ; back to Register Page 0
 MainLoop:
-     bsf       PORTC,0             ; turn on LED C0
+     bsf       PORTC,0             ; turn on LED DS1
 OndelayLoop:
      decfsz    Delay1,f            ; Waste time.  
      goto      OndelayLoop         ; The Inner loop takes 3 instructions per loop * 256 loopss = 768 instructions
@@ -51,7 +51,7 @@ OndelayLoop:
      goto      OndelayLoop         ; (768+3) * 256 = 197376 instructions / 1M instructions per second = 0.197 sec.
                                    ; call it a two-tenths of a second.
       
-     bcf       PORTC,0             ; Turn off LED C0
+     bcf       PORTC,0             ; Turn off LED DS1
 OffDelayLoop:
      decfsz    Delay1,f            ; same delay as above
      goto      OffDelayLoop

@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED="Hello World.asm"
+SOURCEFILES_QUOTED_IF_SPACED=HelloWorld.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED="${OBJECTDIR}/Hello World.o"
-POSSIBLE_DEPFILES="${OBJECTDIR}/Hello World.o.d"
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/HelloWorld.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/HelloWorld.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Hello\ World.o
+OBJECTFILES=${OBJECTDIR}/HelloWorld.o
 
 # Source Files
-SOURCEFILES=Hello World.asm
+SOURCEFILES=HelloWorld.asm
 
 
 CFLAGS=
@@ -94,22 +94,22 @@ MP_LINKER_DEBUG_OPTION=-r=ROM@0xF00:0xFFE -r=RAM@SHARE:0x70:0x70 -r=RAM@SHARE:0x
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Hello\ World.o: Hello\ World.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/HelloWorld.o: HelloWorld.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} "${OBJECTDIR}/Hello World.o".d 
-	@${RM} "${OBJECTDIR}/Hello World.o" 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Hello World.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Hello World.lst\" -e\"${OBJECTDIR}/Hello World.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Hello World.o\" \"Hello World.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Hello World.o"
-	@${FIXDEPS} "${OBJECTDIR}/Hello World.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/HelloWorld.o.d 
+	@${RM} ${OBJECTDIR}/HelloWorld.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/HelloWorld.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/HelloWorld.lst\" -e\"${OBJECTDIR}/HelloWorld.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/HelloWorld.o\" \"HelloWorld.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/HelloWorld.o"
+	@${FIXDEPS} "${OBJECTDIR}/HelloWorld.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 else
-${OBJECTDIR}/Hello\ World.o: Hello\ World.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/HelloWorld.o: HelloWorld.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} "${OBJECTDIR}/Hello World.o".d 
-	@${RM} "${OBJECTDIR}/Hello World.o" 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Hello World.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Hello World.lst\" -e\"${OBJECTDIR}/Hello World.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Hello World.o\" \"Hello World.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Hello World.o"
-	@${FIXDEPS} "${OBJECTDIR}/Hello World.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/HelloWorld.o.d 
+	@${RM} ${OBJECTDIR}/HelloWorld.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/HelloWorld.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/HelloWorld.lst\" -e\"${OBJECTDIR}/HelloWorld.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/HelloWorld.o\" \"HelloWorld.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/HelloWorld.o"
+	@${FIXDEPS} "${OBJECTDIR}/HelloWorld.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 endif
 

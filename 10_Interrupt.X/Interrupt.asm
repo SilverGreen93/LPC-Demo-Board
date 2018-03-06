@@ -33,7 +33,7 @@
      __config (_INTRC_OSC_NOCLKOUT & _WDT_OFF & _PWRTE_OFF & _MCLRE_OFF & _CP_OFF & _BOR_OFF & _IESO_OFF & _FCMEN_OFF)
 
      cblock     0x20
-Delay1               ; Assign an address to label Delay1
+Delay1                 ; Assign an address to label Delay1
 Delay2     
 Display                ; define a variable to hold the diplay
 Direction 
@@ -43,7 +43,7 @@ T0Semaphore
      
 ; Flag Definitions
 
-     cblock 0x70     ; put these up in unbanked RAM
+     cblock 0x70       ; put these up in unbanked RAM
 W_Save
 STATUS_Save
      endc
@@ -67,12 +67,12 @@ ISR:
      goto      ExitISR          
      
 ServiceTimer0:
-     bcf       INTCON,T0IF     ; clear the interrupt flag. (must be done in software)
-     bsf       T0Semaphore,0     ; signal the main routine that the Timer has expired
+     bcf       INTCON,T0IF   ; clear the interrupt flag. (must be done in software)
+     bsf       T0Semaphore,0 ; signal the main routine that the Timer has expired
      bsf       ADCON0,GO     ; start conversion
      btfss     ADCON0,GO     ; this bit will change to zero when the conversion is complete
      goto      $-1
-     comf      ADRESH,w     ; Form the 1's complement of ADresult
+     comf      ADRESH,w      ; Form the 1's complement of ADresult
      movwf     TMR0          ; Also clears the prescaler
      goto      ExitISR
                
