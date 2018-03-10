@@ -41,7 +41,10 @@ Display             ; define a variable to hold the diplay
 Start:
      bsf       STATUS,RP0          ; select Register Page 1
      clrf      TRISC               ; make IO PortC all output
-     bcf       STATUS,RP0          ; back to Register Page 0
+     bcf       STATUS,RP0          ; select Register Page 2
+     bsf       STATUS,RP1
+     clrf      ANSEL               ; set PORTC as digital I/O
+     bcf       STATUS,RP1          ; back to Register Page 0
      movlw     0x08
      movwf     Display
 MainLoop:
