@@ -57,17 +57,17 @@ OBJECTDIR=build/${CND_CONF}/${IMAGE_TYPE}
 DISTDIR=dist/${CND_CONF}/${IMAGE_TYPE}
 
 # Source Files Quoted if spaced
-SOURCEFILES_QUOTED_IF_SPACED="Gray Code.asm"
+SOURCEFILES_QUOTED_IF_SPACED=GrayCode.asm
 
 # Object Files Quoted if spaced
-OBJECTFILES_QUOTED_IF_SPACED="${OBJECTDIR}/Gray Code.o"
-POSSIBLE_DEPFILES="${OBJECTDIR}/Gray Code.o.d"
+OBJECTFILES_QUOTED_IF_SPACED=${OBJECTDIR}/GrayCode.o
+POSSIBLE_DEPFILES=${OBJECTDIR}/GrayCode.o.d
 
 # Object Files
-OBJECTFILES=${OBJECTDIR}/Gray\ Code.o
+OBJECTFILES=${OBJECTDIR}/GrayCode.o
 
 # Source Files
-SOURCEFILES=Gray Code.asm
+SOURCEFILES=GrayCode.asm
 
 
 CFLAGS=
@@ -94,22 +94,22 @@ MP_LINKER_DEBUG_OPTION=-r=ROM@0xF00:0xFFE -r=RAM@SHARE:0x70:0x70 -r=RAM@SHARE:0x
 # ------------------------------------------------------------------------------------
 # Rules for buildStep: assemble
 ifeq ($(TYPE_IMAGE), DEBUG_RUN)
-${OBJECTDIR}/Gray\ Code.o: Gray\ Code.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/GrayCode.o: GrayCode.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} "${OBJECTDIR}/Gray Code.o".d 
-	@${RM} "${OBJECTDIR}/Gray Code.o" 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Gray Code.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Gray Code.lst\" -e\"${OBJECTDIR}/Gray Code.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Gray Code.o\" \"Gray Code.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Gray Code.o"
-	@${FIXDEPS} "${OBJECTDIR}/Gray Code.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/GrayCode.o.d 
+	@${RM} ${OBJECTDIR}/GrayCode.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/GrayCode.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -d__DEBUG  -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/GrayCode.lst\" -e\"${OBJECTDIR}/GrayCode.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/GrayCode.o\" \"GrayCode.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/GrayCode.o"
+	@${FIXDEPS} "${OBJECTDIR}/GrayCode.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 else
-${OBJECTDIR}/Gray\ Code.o: Gray\ Code.asm  nbproject/Makefile-${CND_CONF}.mk
+${OBJECTDIR}/GrayCode.o: GrayCode.asm  nbproject/Makefile-${CND_CONF}.mk
 	@${MKDIR} "${OBJECTDIR}" 
-	@${RM} "${OBJECTDIR}/Gray Code.o".d 
-	@${RM} "${OBJECTDIR}/Gray Code.o" 
-	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/Gray Code.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/Gray Code.lst\" -e\"${OBJECTDIR}/Gray Code.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/Gray Code.o\" \"Gray Code.asm\" 
-	@${DEP_GEN} -d "${OBJECTDIR}/Gray Code.o"
-	@${FIXDEPS} "${OBJECTDIR}/Gray Code.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
+	@${RM} ${OBJECTDIR}/GrayCode.o.d 
+	@${RM} ${OBJECTDIR}/GrayCode.o 
+	@${FIXDEPS} dummy.d -e "${OBJECTDIR}/GrayCode.err" $(SILENT) -c ${MP_AS} $(MP_EXTRA_AS_PRE) -q -p$(MP_PROCESSOR_OPTION)  -l\"${OBJECTDIR}/GrayCode.lst\" -e\"${OBJECTDIR}/GrayCode.err\" $(ASM_OPTIONS)    -o\"${OBJECTDIR}/GrayCode.o\" \"GrayCode.asm\" 
+	@${DEP_GEN} -d "${OBJECTDIR}/GrayCode.o"
+	@${FIXDEPS} "${OBJECTDIR}/GrayCode.o.d" $(SILENT) -rsi ${MP_AS_DIR} -c18 
 	
 endif
 
