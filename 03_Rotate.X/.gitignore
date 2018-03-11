@@ -2,3 +2,6 @@ build/
 debug/
 dist/
 nbproject/private/
+nbproject/*.mk
+nbproject/*.bash
+nbproject/*.properties
